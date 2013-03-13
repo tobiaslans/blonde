@@ -8,7 +8,7 @@
 		</div>
 		
 		<div class="large-4 columns">
-			<h2 class="subheader">Boka Tid</h2>
+			<h2 class="subheader">BOOOOOKA Tid</h2>
 		</div>
 	</div>
 	
