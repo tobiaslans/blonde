@@ -1,0 +1,93 @@
+/* 
+==========================================================================
+Variables
+========================================================================== */
+// Colors
+$pink:       #CC4569;
+$pink-light: #CC9A97;
+$purple:     #802B42;
+$pink-dark:  #80615E;
+$grey-light: #e5e5e5;
+$grey-dark:  #333333;
+
+// Defaults
+$active: true;
+
+// Buttons
+$button-color: $pink;
+$button-radius: emCalc(10px);
+$menu_button_size: emCalc(12px);
+$full-width: true;
+
+
+
+/* 
+==========================================================================
+Boka Knapp
+========================================================================== */
+.knapp {
+  @include button-base;
+  @include button-size;
+  @include button-style($button-color);
+  @include radius($button-radius);
+  @include single-transition;
+  @include inset-shadow($active);
+}
+.knapp-boka {
+  @include button-base;
+  @include button-size($button-med);
+  @include button-style($pink);
+  @include radius($button-radius);
+  @include single-transition;
+  @include inset-shadow($active);
+}
+
+
+/* 
+==========================================================================
+Meny
+========================================================================== */
+.menu { 
+	@include button-group-container;
+
+	padding-bottom: 20px;
+	margin-left: auto;
+	margin-right: auto;
+
+	.menu_button {
+		@include button;
+		@include button-size($button_sml);
+		@include button-style($grey-light);
+		@include inset-shadow;
+		@include single-transition;
+	}
+
+	& > li { 
+		@include button-group-style(true); 
+	}
+}
+
+
+/* 
+==========================================================================
+Logo
+========================================================================== */
+#logo {
+	padding: 30px 0px;
+}
+
+
+/* 
+==========================================================================
+Welcome
+========================================================================== */
+#welcome {
+
+	h1 {
+		color: $grey-dark;
+		margin: 10px 0px;
+	}
+	h2 {
+		margin: 20px 0px 0px 0px;
+	}
+}
